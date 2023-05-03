@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 @layer components {
-  .form-input {
-    @apply px-8 py-4 border-[1px] border-gray-300 rounded-lg;
-  }
+	.form-input {
+		@apply text-[14px] px-8 py-[18px] border-[1px] border-gray-300 rounded-lg placeholder:text-dark-blue placeholder:font-semibold font-semibold outline-none focus:border-blue;
+	}
 }

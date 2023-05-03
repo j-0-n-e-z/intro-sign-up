@@ -12,7 +12,10 @@ export default {
       },
       backgroundImage: {
         desktop: 'url(/assets/images/bg-intro-desktop.png)'
-      }
+			},
+			boxShadow: {
+				grayishBlue: '0 8px 0 0 #3e3c493f'
+			}
 		}
 	},
 	plugins: []
