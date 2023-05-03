@@ -9,7 +9,10 @@ export default {
 				blue: 'hsl(248, 32%, 49%)',
 				'dark-blue': 'hsl(249, 10%, 26%)',
 				'grayish-blue': 'hsl(246, 25%, 77%)'
-			}
+      },
+      backgroundImage: {
+        desktop: 'url(/assets/images/bg-intro-desktop.png)'
+      }
 		}
 	},
 	plugins: []

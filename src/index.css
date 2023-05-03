@@ -3,3 +3,9 @@
 @tailwind components;
 @tailwind base;
 @tailwind utilities;
+
+@layer components {
+  .form-input {
+    @apply px-8 py-4 border-[1px] border-gray-300 rounded-lg;
+  }
+}
