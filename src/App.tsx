@@ -1,4 +1,25 @@
+import { useFormik } from 'formik'
+import { validationSchema } from './data/validationSchema'
+import Input from './Input'
+import { inputsData } from './data/inputsData'
+
 export default function App() {
+	const formik = useFormik({
+		initialValues: Object.fromEntries(
+			Object.keys(inputsData).map(field => [field, ''])
+		),
+		validationSchema: validationSchema,
+		onSubmit: values => {
+			console.log(values)
+		}
+	})
+
+	type Field = keyof typeof formik.values
+
+	function isErrorOccurred(field: Field) {
+		return Boolean(formik.errors[field] && formik.touched[field])
+	}
+
 	return (
 		<main className='font-[Poppins] w-full h-screen grid place-items-center bg-red bg-desktop bg-no-repeat bg-center'>
 			<section className='flex gap-x-7'>
@@ -17,24 +38,27 @@ export default function App() {
 						<span className='font-semibold text-white'>Try it free 7 days</span>
 						<span className='text-white'> then $20/mo. thereafter</span>
 					</div>
-					<form className='flex flex-col gap-y-[18px] bg-white p-10 rounded-xl shadow-grayishBlue'>
-						<input
-							className='form-input'
-							type='text'
-							placeholder='First Name'
-						/>
-						<input className='form-input' type='text' placeholder='Last Name' />
-						<input
-							className='form-input'
-							type='email'
-							placeholder='Email Address'
-						/>
-						<input
-							className='form-input'
-							type='password'
-							placeholder='Password'
-						/>
-						<button className='uppercase py-4 text-center bg-green hover:bg-green/80 transition rounded-lg text-white font-medium tracking-wide focus:ring-2 focus:ring-blue outline-none'>
+					<form
+						onSubmit={formik.handleSubmit}
+						className='flex flex-col gap-y-[18px] bg-white p-10 rounded-xl shadow-grayishBlue'
+					>
+						{Object.keys(formik.values).map(field => (
+							<Input
+								key={field}
+								id={field}
+								type={inputsData[field].type}
+								placeholder={inputsData[field].placeholder}
+								value={formik.values[field as Field]}
+								errorMessage={formik.errors[field as Field]}
+								isErrorOccurred={isErrorOccurred(field as Field)}
+								handleChange={formik.handleChange}
+								handleBlur={formik.handleBlur}
+							/>
+						))}
+						<button
+							type='submit'
+							className='uppercase py-4 text-center bg-green hover:bg-green/80 transition rounded-lg text-white font-medium tracking-wide outline-none focus-visible:ring-2 focus-visible:ring-blue'
+						>
 							Claim your free trial
 						</button>
 						<span className='text-gray-400 text-center text-[11px] -mt-[6px]'>

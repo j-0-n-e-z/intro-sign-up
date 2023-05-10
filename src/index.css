@@ -6,6 +6,18 @@
 
 @layer components {
 	.form-input {
-		@apply text-[14px] px-8 py-[18px] border-[1px] border-gray-300 rounded-lg placeholder:text-dark-blue placeholder:font-semibold font-semibold outline-none focus:border-blue;
+		@apply w-full text-[14px] px-8 py-[18px] border-[1px] border-gray-300 rounded-lg placeholder:text-dark-blue placeholder:font-semibold font-semibold outline-none focus:border-blue;
+	}
+
+	.form-input--error {
+		@apply border-[2px] border-red text-red placeholder:text-red focus:border-red;
+	}
+
+	.form-input__error-text {
+		@apply text-red text-end italic mt-2 text-[12px];
+	}
+
+	.form-input__icon {
+		@apply absolute top-5 right-7;
 	}
 }
