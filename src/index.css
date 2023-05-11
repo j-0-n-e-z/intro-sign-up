@@ -17,7 +17,7 @@
 		@apply border-[2px] border-my-red text-my-red placeholder:text-my-red focus:border-my-red;
 	}
 
-	.input-container__error-text {
+	.input-container__error-msg {
 		@apply text-my-red text-end italic mt-1 text-[11px];
 	}
 

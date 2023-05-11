@@ -36,7 +36,7 @@ export const Input: FC<InputPropsType> = ({
 			/>
 			{isErrorOccurred && (
 				<>
-					<p className='input-container__error-text'>{errorMessage}</p>
+					<p className='input-container__error-msg'>{errorMessage}</p>
 					<img
 						className='input-container__icon'
 						src='assets/images/icon-error.svg'
