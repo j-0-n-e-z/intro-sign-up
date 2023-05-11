@@ -6,15 +6,15 @@
 
 @layer components {
 	.form-input {
-		@apply w-full text-[14px] lg:px-8 px-4 py-[18px] border-[1px] border-gray-300 rounded-lg placeholder:text-dark-blue placeholder:font-semibold font-semibold outline-none focus:border-blue;
+		@apply w-full text-[14px] lg:px-8 px-4 py-[18px] border-[1px] border-gray-300 rounded-lg placeholder:text-dark-blue placeholder:font-semibold font-semibold outline-none focus:border-my-blue;
 	}
 
 	.form-input--error {
-		@apply border-[2px] border-red text-red placeholder:text-red focus:border-red;
+		@apply border-[2px] border-my-red text-my-red placeholder:text-my-red focus:border-my-red;
 	}
 
 	.form-input__error-text {
-		@apply text-red text-end italic mt-1 text-[11px];
+		@apply text-my-red text-end italic mt-1 text-[11px];
 	}
 
 	.form-input__icon {

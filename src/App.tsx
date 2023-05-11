@@ -21,7 +21,7 @@ export default function App() {
 	}
 
 	return (
-		<main className='font-[Poppins] w-full min-h-screen grid place-items-center bg-red lg:bg-desktop bg-mobile bg-no-repeat bg-center'>
+		<main className='font-[Poppins] w-full min-h-screen grid place-items-center bg-my-red lg:bg-desktop bg-mobile bg-no-repeat bg-center'>
 			<section className='lg:w-auto w-[88%] flex lg:flex-row flex-col lg:gap-x-7 gap-y-14 my-20'>
 				<div className='lg:w-[540px] grid content-center lg:gap-y-7 gap-y-5 mt-2 lg:text-start text-center'>
 					<h2 className='text-white lg:text-[50px] text-[28px] lg:px-0 px-10 font-bold lg:leading-[3.5rem] leading-9 -tracking-[0.025rem]'>
@@ -34,7 +34,7 @@ export default function App() {
 					</p>
 				</div>
 				<div className='lg:w-[540px] space-y-6'>
-					<div className='bg-blue lg:px-4 px-20 lg:py-[18px] py-4 text-[15px] rounded-xl text-center shadow-grayishBlue tracking-[0.01rem] lg:leading-6 leading-7'>
+					<div className='bg-my-blue lg:px-4 px-20 lg:py-[18px] py-4 text-[15px] rounded-xl text-center shadow-grayishBlue tracking-[0.01rem] lg:leading-6 leading-7'>
 						<span className='font-semibold text-white'>Try it free 7 days</span>
 						<span className='text-white'> then $20/mo. thereafter</span>
 					</div>
@@ -57,13 +57,13 @@ export default function App() {
 						))}
 						<button
 							type='submit'
-							className='uppercase py-4 text-center bg-green hover:bg-green/80 transition rounded-lg text-white font-medium tracking-wide outline-none focus-visible:ring-2 focus-visible:ring-blue shadow-grayishBlueInset'
+							className='uppercase py-4 text-center bg-my-green hover:bg-my-green/80 transition rounded-lg text-white font-medium tracking-wide outline-none focus-visible:ring-2 focus-visible:ring-my-blue shadow-grayishBlueInset'
 						>
 							Claim your free trial
 						</button>
 						<span className='text-gray-400 text-center text-[11px] -mt-[6px]'>
 							By clicking the button, you are agreeing to our{' '}
-							<span className='text-red font-bold'>Terms and Services</span>
+							<span className='text-my-red font-bold'>Terms and Services</span>
 						</span>
 					</form>
 				</div>
