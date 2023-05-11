@@ -11,6 +11,7 @@ export default function App() {
 		validationSchema: validationSchema,
 		onSubmit: values => {
 			console.log(values)
+			formik.resetForm()
 		}
 	})
 
