@@ -5,19 +5,23 @@
 @tailwind utilities;
 
 @layer components {
-	.form-input {
+	.input-container {
+		@apply relative;
+	}
+
+	.input-container__input {
 		@apply w-full text-[14px] lg:px-8 px-4 py-[18px] border-[1px] border-gray-300 rounded-lg placeholder:text-dark-blue placeholder:font-semibold font-semibold outline-none focus:border-my-blue;
 	}
 
-	.form-input--error {
+	.input-container__input--error {
 		@apply border-[2px] border-my-red text-my-red placeholder:text-my-red focus:border-my-red;
 	}
 
-	.form-input__error-text {
+	.input-container__error-text {
 		@apply text-my-red text-end italic mt-1 text-[11px];
 	}
 
-	.form-input__icon {
+	.input-container__icon {
 		@apply absolute top-5 right-7;
 	}
 }

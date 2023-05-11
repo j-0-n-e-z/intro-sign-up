@@ -22,9 +22,11 @@ export const Input: FC<InputPropsType> = ({
 	handleChange
 }) => {
 	return (
-		<div className='relative'>
+		<div className='input-container'>
 			<input
-				className={`form-input ${isErrorOccurred ? 'form-input--error' : ''}`}
+				className={`input-container__input ${
+					isErrorOccurred ? 'input-container__input--error' : ''
+				}`}
 				type={type}
 				placeholder={isErrorOccurred ? '' : placeholder}
 				id={id}
@@ -34,9 +36,9 @@ export const Input: FC<InputPropsType> = ({
 			/>
 			{isErrorOccurred && (
 				<>
-					<p className='form-input__error-text'>{errorMessage}</p>
+					<p className='input-container__error-text'>{errorMessage}</p>
 					<img
-						className='form-input__icon'
+						className='input-container__icon'
 						src='assets/images/icon-error.svg'
 						alt='icon-error'
 					/>
