@@ -33,6 +33,7 @@ export const Input: FC<InputPropsType> = ({
 				value={value}
 				onChange={handleChange}
 				onBlur={handleBlur}
+				onInvalid={e => e.preventDefault()}
 			/>
 			{isErrorOccurred && (
 				<>
