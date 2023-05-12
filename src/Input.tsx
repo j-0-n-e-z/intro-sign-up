@@ -2,21 +2,21 @@ import { FC } from 'react'
 
 type InputPropsType = {
 	isErrorOccurred: boolean
-  value: string,
-  id: string,
-  type: string,
-  placeholder: string,
+	value: string
+	id: string
+	type: string
+	placeholder: string
 	errorMessage: string | undefined
 	handleChange: (e: React.ChangeEvent) => void
 	handleBlur: (e: React.ChangeEvent) => void
 }
 
 export const Input: FC<InputPropsType> = ({
-  value,
-  id,
-  type,
-  errorMessage,
-  placeholder,
+	id,
+	type,
+	value,
+	placeholder,
+	errorMessage,
 	isErrorOccurred,
 	handleBlur,
 	handleChange
@@ -48,5 +48,3 @@ export const Input: FC<InputPropsType> = ({
 		</div>
 	)
 }
-
-export default Input

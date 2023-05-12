@@ -1,7 +1,7 @@
 import { useFormik } from 'formik'
 import { validationSchema } from './data/validationSchema'
-import Input from './Input'
 import { inputsData } from './data/inputsData'
+import { Input } from './Input'
 
 export default function App() {
 	const formik = useFormik({
@@ -15,7 +15,7 @@ export default function App() {
 		}
 	})
 
-	type Field = keyof typeof formik.values
+	type Field = keyof typeof inputsData
 
 	function isErrorOccurred(field: Field) {
 		return Boolean(formik.errors[field] && formik.touched[field])
@@ -25,9 +25,9 @@ export default function App() {
 		<main className='font-[Poppins] w-full min-h-screen grid place-items-center bg-my-red lg:bg-desktop bg-mobile bg-no-repeat bg-center'>
 			<section className='lg:w-auto w-[88%] flex lg:flex-row flex-col lg:gap-x-7 gap-y-14 my-20'>
 				<div className='lg:w-[540px] grid content-center lg:gap-y-7 gap-y-5 mt-2 lg:text-start text-center'>
-					<h2 className='text-white lg:text-[50px] text-[28px] lg:px-0 px-10 font-bold lg:leading-[3.5rem] leading-9 -tracking-[0.025rem]'>
+					<h1 className='text-white lg:text-[50px] text-[28px] lg:px-0 px-10 font-bold lg:leading-[3.5rem] leading-9 -tracking-[0.025rem]'>
 						Learn to code by watching others
-					</h2>
+					</h1>
 					<p className='text-white lg:leading-[1.65rem] leading-7 lg:px-0 px-2'>
 						See how experienced developers solve problems in real-time. Watching
 						scripted tutorials is great, but understanding how developers think
@@ -43,15 +43,15 @@ export default function App() {
 						onSubmit={formik.handleSubmit}
 						className='flex flex-col lg:gap-y-[18px] gap-y-4 bg-white lg:p-10 p-5 rounded-xl shadow-grayishBlue'
 					>
-						{Object.keys(formik.values).map(field => (
+						{(Object.keys(formik.values) as Field[]).map(field => (
 							<Input
 								key={field}
 								id={field}
 								type={inputsData[field].type}
 								placeholder={inputsData[field].placeholder}
-								value={formik.values[field as Field]}
-								errorMessage={formik.errors[field as Field]}
-								isErrorOccurred={isErrorOccurred(field as Field)}
+								value={formik.values[field]}
+								errorMessage={formik.errors[field]}
+								isErrorOccurred={isErrorOccurred(field)}
 								handleChange={formik.handleChange}
 								handleBlur={formik.handleBlur}
 							/>
