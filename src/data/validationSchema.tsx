@@ -17,7 +17,7 @@ export const validationSchema = Yup.object({
 		.required('Password cannot be empty')
 		.max(20, 'Password cannot be longer than 20 characters')
 		.min(8, 'Password must be at least 8 characters')
-		.matches(/^[A-Z]/, 'Password must begin with capital letter')
+		.matches(/^[A-Z]/, 'Password must begin with a capital letter')
 		.matches(/(?=.*\d)/, 'Password must contain digits')
 		.matches(/(?=.*[A-Za-z])/, 'Password must contain letters')
 		.matches(

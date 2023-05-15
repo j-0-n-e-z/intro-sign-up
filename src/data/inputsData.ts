@@ -1,3 +1,5 @@
+export type Field = keyof typeof inputsData
+
 export const inputsData = {
 	firstName: {
 		placeholder: 'First Name',

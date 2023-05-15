@@ -1,21 +1,18 @@
 import { FC } from 'react'
+import { Field, inputsData } from './data/inputsData'
 
 type InputPropsType = {
 	isErrorOccurred: boolean
 	value: string
-	id: string
-	type: string
-	placeholder: string
+	field: Field
 	errorMessage: string | undefined
 	handleChange: (e: React.ChangeEvent) => void
 	handleBlur: (e: React.ChangeEvent) => void
 }
 
 export const Input: FC<InputPropsType> = ({
-	id,
-	type,
+	field,
 	value,
-	placeholder,
 	errorMessage,
 	isErrorOccurred,
 	handleBlur,
@@ -27,10 +24,10 @@ export const Input: FC<InputPropsType> = ({
 				className={`input-container__input ${
 					isErrorOccurred ? 'input-container__input--error' : ''
 				}`}
-				type={type}
-				placeholder={isErrorOccurred ? '' : placeholder}
-				id={id}
+				id={field}
 				value={value}
+				type={inputsData[field].type}
+				placeholder={isErrorOccurred ? '' : inputsData[field].placeholder}
 				onChange={handleChange}
 				onBlur={handleBlur}
 				onInvalid={e => e.preventDefault()}
