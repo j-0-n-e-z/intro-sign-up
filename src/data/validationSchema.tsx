@@ -21,7 +21,7 @@ export const validationSchema = Yup.object({
 		.matches(/(?=.*\d)/, 'Password must contain digits')
 		.matches(/(?=.*[A-Za-z])/, 'Password must contain letters')
 		.matches(
-			/(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,20}/,
+			/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,20}$/,
 			'Password must contain letters and digits only'
 		)
 })
