@@ -12,7 +12,7 @@ export const validationSchema = Yup.object({
 	email: Yup.string()
 		.required('Email cannot be empty')
 		.email('Looks like this is not an email')
-		.max(20, 'Email cannot be longer than 20 characters'),
+		.max(30, 'Email cannot be longer than 30 characters'),
 	password: Yup.string()
 		.required('Password cannot be empty')
 		.max(20, 'Password cannot be longer than 20 characters')
