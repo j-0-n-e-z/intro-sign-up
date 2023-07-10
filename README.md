@@ -1,5 +1,5 @@
 # Intro Sign Up
-This repo is a solution for [this challenge](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1).
+This repo is a solution to [this challenge](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1).
 
 ## Desktop (1440x800)
 ![j-0-n-e-z-intro-sign-up netlify app_desktop](https://github.com/j-0-n-e-z/intro-sign-up/assets/46866168/36494df4-8e31-4e6e-b39c-cdded7af62ac)
